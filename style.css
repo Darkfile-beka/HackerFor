@@ -1,0 +1,617 @@
+/*!
+ * Font Awesome Free 6.0.0-beta2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+/*gogle fonts text fontti*/
+
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+/* root ishlari*/
+
+:root {
+    --black: #2c5364;
+    --winte: #e5f1ce;
+    --gradinet: linear-gradient(to right, #000000, #0f9b0f);
+    --bacgroud: rgba(225, 225, 225, 16%);
+    --box-show: 0 0.5rem 1rem rgba(225, 225, 225, 40%);
+    --border: 0.1rem solid rgba(225, 225, 225, 45%);
+    --border-top: 0.1rem solid rgba(225, 225, 225, 50%);
+    --border-left: 0.1rem solid rgba(225, 225, 225, 50%);
+}
+
+/* opshi*/
+
+* {
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/* html olchami*/
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+}
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+html::-webkit-scrollbar-track {
+    background: var(--gradinet);
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--winte);
+    border-radius: 5rem;
+}
+section {
+    padding: 2rem 9%;
+}
+.heading {
+    text-align: center;
+    padding-bottom: 2.5rem;
+}
+.heading span {
+    background: var(--bacgroud);
+    border-radius: 0.5rem;
+    border-top: var(--border-top);
+    border-left: var(--border-left);
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 1.5rem 9.5rem;
+    text-shadow: 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+.heading span:hover {
+    transform: translateY(-20px);
+    transition: 0.2s;
+    box-shadow: -1px -1px 20px 3px #0f9b0f;
+}
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    transition: 0.2s linear;
+    background: var(--winte);
+    color: var(--black);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-show);
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.btn:hover {
+    letter-spacing: 0.1rem;
+}
+
+.gradient-baclgroud {
+    height: 100vh;
+    width: 100%;
+    background: var(--gradinet);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    background-size: 400% 400%;
+    animation: change 10s ease-in-out infinite;
+}
+.gradient-baclgroud .animated-box {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.582);
+    display: block;
+    pointer-events: none;
+    border-radius: 0.5rem;
+    animation: animate 2s linear infinite;
+}
+
+/* animatsiya*/
+@keyframes change {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateY(-200%) rotate(0deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1) translateY(-500%) rotate(360deg);
+    }
+}
+.header {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    z-index: 1000;
+    width: 95%;
+    transform: translateX(-50%);
+    background: var(--bacgroud);
+    border: var(--border);
+    border-top: var(--border-top);
+    border-left: var(--border-left);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-show);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(4rem);
+}
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--winte);
+    text-transform: uppercase;
+}
+.header .logo i {
+    color: var(--black);
+}
+.header .navbar a {
+    font-family: "Georama", sans-serif;
+    font-size: 1.7rem;
+    margin-left: 2rem;
+    color: var(--winte);
+    transition: 0.3s;
+}
+
+.header .navbar a:hover {
+    color: #000;
+}
+#menu-btn {
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--winte);
+    display: none;
+}
+.home {
+    height: 100vh;
+    padding: 7rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./img/z-index.png);
+    background-size: 500px;
+}
+.home .homeimg img {
+    width: 80%;
+}
+.home .content {
+    width: 75rem;
+    text-align: center;
+}
+.home .content h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 4rem;
+    line-height: 1.8;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.home .content p {
+    color: #fff;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+    text-transform: capitalize;
+}
+.courses {
+    background-image: url(./img/z-index2.png);
+    background-size: 500px;
+}
+.courses .nox-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 5rem;
+}
+.courses .nox-container .box {
+    text-align: center;
+    background: rgb(14 148 14 / 0%);
+    border-radius: 0.5rem;
+    border: var(--border);
+    border-top: var(--border-top);
+    border-left: var(--border-left);
+    box-shadow: var(--box-show);
+    padding: 2rem;
+    backdrop-filter: blur(4rem);
+    transition: 0.2s;
+}
+.courses .nox-container .box:hover {
+    transform: translateY(-20px);
+    transition: 0.2s;
+    box-shadow: -1px -1px 20px 3px #0f9b0f;
+}
+.courses .nox-container .box img {
+    height: 20rem;
+}
+.courses .nox-container .box h3 {
+    font-size: 2rem;
+    color: var(--winte);
+}
+.courses .nox-container .box p {
+    font-family: "Noto Sans Mono", monospace;
+    font-size: 1.5rem;
+    color: var(--winte);
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+.courses .nox-container .box .icons {
+    border-top: var(--border-top);
+    margin-top: 2rem;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.courses .nox-container .box .icons a {
+    font-size: 1.6rem;
+    color: var(--winte);
+}
+.courses .nox-container .box .icons a:hover {
+    color: var(--black);
+}
+.courses .nox-container .box .icons a i {
+    padding-right: 0.5rem;
+}
+.teachers {
+    background-image: url(./img/z-index4.png);
+    background-size: 600px;
+}
+.teachers .nox-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 5rem;
+}
+.teachers .nox-container .box {
+    text-align: center;
+    background: var(--bacgroud);
+    border-radius: 0.5rem;
+    border: var(--border);
+    border-top: var(--border-top);
+    border-left: var(--border-left);
+    box-shadow: var(--box-show);
+    padding: 2rem;
+    backdrop-filter: blur(0.4rem);
+    transition: 0.2s;
+}
+.teachers .nox-container .box:hover {
+    transform: translateY(-20px);
+    transition: 0.2s;
+    box-shadow: -1px -1px 20px 3px #0f9b0f;
+}
+.teachers .nox-container .box img {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.teachers .nox-container .box h3 {
+    font-size: 2.2rem;
+    color: var(--winte);
+    padding: 0.5rem 0;
+}
+.teachers .nox-container .box span {
+    font-size: 1.6rem;
+    color: var(--winte);
+}
+.teachers .nox-container .box .share {
+    padding-top: 1rem;
+}
+.teachers .nox-container .box .share a {
+    padding: 1% 5%;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background: var(--bacgroud);
+    box-shadow: var(--box-show);
+    color: var(--winte);
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
+.teachers .nox-container .box .share a:hover {
+    background: var(--winte);
+    color: var(--black);
+}
+
+/* ================================================*/
+.plan {
+    background-image: url(./img/z-index5.png);
+    background-size: 600px;
+}
+.plan .nox-containen {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 5rem;
+}
+.plan .nox-containen .box {
+    text-align: center;
+    background: var(--bacgroud);
+    border-radius: 0.5rem;
+    border: var(--border);
+    border-top: var(--border-top);
+    border-left: var(--border-left);
+    box-shadow: var(--box-show);
+    padding: 2rem 0;
+    backdrop-filter: blur(0.4rem);
+    transition: 0.2s;
+}
+.plan .nox-containen .box:hover {
+    transform: translateY(-20px);
+    transition: 0.2s;
+    box-shadow: -1px -1px 20px 3px #0f9b0f;
+}
+
+.plan .nox-containen .box i {
+    color: var(--winte);
+    font-size: 7rem;
+    padding: 1rem 0;
+}
+.plan .nox-containen .box .bxs-planet {
+    transform: rotate(-45deg);
+}
+.plan .nox-containen .box h3 {
+    cursor: pointer;
+    background: rgba(225, 225, 225, 0.4);
+    font-size: 2rem;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    color: var(--black);
+    transition: 0.2s linear;
+}
+.plan .nox-containen .box h3:hover {
+    letter-spacing: 0.1rem;
+}
+.plan .nox-containen .box ul {
+    padding: 1rem 0;
+    list-style: none;
+}
+.plan .nox-containen .box ul li {
+    padding: 1rem 0;
+    color: var(--winte);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.plan .nox-containen .box ul li:hover {
+    display: block;
+    background: rgba(225, 225, 225, 0.4);
+    color: #000;
+    transition: 0.2s linear;
+}
+.plan .nox-containen .box a {
+    display: block;
+    background: rgba(225, 225, 225, 0.4);
+    font-size: 2rem;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    color: var(--black);
+    transition: 0.2s linear;
+}
+.plan .nox-containen .box a:hover {
+    letter-spacing: 0.1rem;
+}
+.plan .nox-containen .box .price {
+    font-size: 6rem;
+    padding-top: 1rem;
+    font-weight: bolder;
+    color: var(--winte);
+}
+.plan .nox-containen .box .price span {
+    font-size: 6rem;
+    font-weight: normal;
+}
+/*===================================*/
+.review {
+    background-image: url(./img/z-index3.png);
+    background-size: 600px;
+}
+.review .nox-containen {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 5rem;
+}
+.review .nox-containen .box {
+    text-align: center;
+    background: var(--bacgroud);
+    border-radius: 0.5rem;
+    border: var(--border);
+    border-top: var(--border-top);
+    border-left: var(--border-left);
+    box-shadow: var(--box-show);
+    padding: 2rem;
+    backdrop-filter: blur(4rem);
+    transition: 0.2s;
+}
+.review .nox-containen .box:hover {
+    transform: translateY(-20px);
+    transition: 0.2s;
+    box-shadow: -1px -1px 20px 3px #0f9b0f;
+}
+
+.review .nox-containen .box .img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.review .nox-containen .box .img i {
+    font-size: 5rem;
+    color: rgba(225, 225, 225, 0.4);
+}
+.review .nox-containen .box .img img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.review .nox-containen .box h3 {
+    padding: 0.5rem;
+    font-size: 2.2rem;
+    color: var(--winte);
+}
+.review .nox-containen .box span {
+    font-size: 2.2rem;
+    color: var(--winte);
+}
+.review .nox-containen .box p {
+    font-family: "Noto Sans Mono", monospace;
+    font-size: 1.5rem;
+    color: var(--winte);
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+.review .nox-containen .box .start {
+    padding-top: 0.5rem;
+}
+.review .nox-containen .box .start i {
+    font-size: 1.7rem;
+    color: gold;
+}
+/*================contact =======================*/
+.contact h1 {
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.contact form {
+    max-width: 100rem;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    text-align: center;
+    background: var(--bacgroud);
+    border-radius: 0.5rem;
+    border: var(--border);
+    border-top: var(--border-top);
+    border-left: var(--border-left);
+    box-shadow: var(--box-show);
+    padding: 2rem;
+    backdrop-filter: blur(0.4rem);
+}
+.contact form .box {
+    width: 100%;
+    background: var(--bacgroud);
+    border-radius: 0.5rem;
+    margin: 0.7rem 0;
+    box-shadow: var(--box-show);
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    color: var(--winte);
+    text-transform: none;
+    font-weight: 300;
+}
+.contact form .box::placeholder {
+    color: #eee;
+    text-transform: capitalize;
+}
+.contact form textarea {
+    height: 15rem;
+    resize: none;
+}
+/*=========footer section======================*/
+.footer {
+    text-align: center;
+}
+.footer .share {
+    padding: 1rem 0;
+}
+.footer .share a {
+    margin: 0 1rem;
+    font-size: 4rem;
+    color: var(--winte);
+    transition: 0.2s;
+}
+.footer .share a:hover {
+    color: red;
+    transform: scaleY(-20px);
+}
+.footer .credit {
+    padding: 1.5rem 0;
+    margin: 1rem 0;
+    font-size: 2rem;
+    color: var(--winte);
+}
+
+/* ===================== media====================*/
+@media (max-width: 911px) {
+    html {
+        font-size: 55%;
+    }
+    section {
+        padding: 2rem;
+    }
+}
+/* ===================== ====================*/
+@media (max-width: 768px) {
+    #menu-btn {
+        display: initial;
+        transition: 0.2s linear;
+    }
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+    }
+    .header .navbar {
+        position: absolute;
+        top: 115%;
+        left: 0;
+        right: 0;
+        background: var(--gradinet);
+        border-radius: 0.5rem;
+        transition: 0.3s linear;
+        box-shadow: var(--box-show);
+        padding: 0.5rem 1.5rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .header .navbar a {
+        font-size: 2rem;
+        display: block;
+        background: var(--bacgroud);
+        border-radius: 0.5rem;
+        margin: 1.2rem 0;
+        padding: 1.5rem;
+        border: var(--border);
+        border-top: var(--border-top);
+        border-left: var(--border-left);
+        box-shadow: var(--box-show);
+    }
+    .home .content h3 {
+        font-size: 3.5rem;
+    }
+    .home .content p {
+        font-size: 1.6rem;
+    }
+}
+/* ===================== ====================*/
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .heading span {
+        font-size: 3rem;
+    }
+}
